@@ -1,21 +1,21 @@
 <%= form_for(@campaign, url => wizard_path, method => :put) do |f| %>
-	<% if @campign.errors.any? %>
-	<div id="error_explanation" >
-		<h2><%= pluralise (@campaign.errors.count, "error") %>
-			prohibited this campaign fro being saved:</h2>
-			<ul>
+<% if @campign.errors.any? %>
+<div id="error_explanation" >
+	<h2><%= pluralise (@campaign.errors.count, "error") %>
+		prohibited this campaign fro being saved:</h2>
+		<ul>
 			<% @campaign.errors.full_messages.each do |msg| %>
-				<li><%= msg %></li>
+			<li><%= msg %></li>
 			<% end %>	
-			</ul>
-			<div class="form-group" >
-				<% f.label 'campaign name' %>
-				<% f.text_field :name, :class => "form-control", :placeholder => "campaign name" %>
-				</div>
-			<div class="form-group" >
-				<%= f.label :description %>
-				<%= f.text_area :description , :class => "form-control", 
-				:rows => "3", :placeholder => "description" %>
-				</div>
-			<% f.submit 'Create', :class => "btn btn-default" %>
-			<% end %>
+		</ul>
+		<div class="form-group" >
+			<% f.label 'campaign name' %>
+			<% f.text_field :name, :class => "form-control", :placeholder => "campaign name" %>
+		</div>
+		<div class="form-group" >
+			<%= f.label :description %>
+			<%= f.text_area :description , :class => "form-control", 
+			:rows => "3", :placeholder => "description" %>
+		</div>
+		<% f.submit 'Create', :class => "btn btn-default" %>
+		<% end %>
