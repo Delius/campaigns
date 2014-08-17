@@ -1,0 +1,2 @@
+module SetupCampaignHelper
+end
