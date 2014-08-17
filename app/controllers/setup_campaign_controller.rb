@@ -10,4 +10,11 @@ def show
 end
 render_wizard
 
+def update
+	@user = current_user
+	@campaign = Campaign.new(campaign_params)
+	@campaign.users << @user
+	render_wizard @campaign
+end
+
 end
