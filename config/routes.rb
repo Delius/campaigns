@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :plans
+
+  resources :charities
+
   devise_for :users
   
   resources :setup_campaign
